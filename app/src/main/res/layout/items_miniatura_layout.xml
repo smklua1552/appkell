@@ -11,17 +11,16 @@
         android:id="@+id/idAppBarItensMiniatura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/idToolbar"
+            app:navigationIcon="@drawable/baseline_arrow_back"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </androidx.appcompat.widget.Toolbar>
-
+            android:layout_height="wrap_content"
+            app:title="Miniaturas" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout
+        android:layout_below="@+id/idAppBarItensMiniatura"
         android:id="@+id/idTableLayoutItemsMiniatura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
