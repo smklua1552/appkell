@@ -13,7 +13,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
-        android:src="@color/black">
-
-    </ImageView>
+        android:src="@drawable/house"
+        android:scaleType="centerCrop"
+        android:id="@+id/imgMenuPrincipal" />
 </LinearLayout>
