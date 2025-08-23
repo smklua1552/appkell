@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AcessoriosFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".AcessoriosFragment"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#ff0000">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:text="Acessórios"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="#fff" />
+</LinearLayout>
