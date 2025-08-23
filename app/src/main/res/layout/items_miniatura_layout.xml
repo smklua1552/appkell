@@ -20,7 +20,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout
-        android:layout_below="@+id/idAppBarItensMiniatura"
+        android:layout_below="@id/idAppBarItensMiniatura"
         android:id="@+id/idTableLayoutItemsMiniatura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

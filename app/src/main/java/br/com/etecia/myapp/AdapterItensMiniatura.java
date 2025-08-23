@@ -13,11 +13,20 @@ public class AdapterItensMiniatura extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return null;
+        switch (position) {
+            case 0:
+                return new MiniaturasFragment();
+            case 1:
+                return new AcessoriosFragment();
+            case 2:
+                return new LojaFragment();
+            default:
+                return new MiniaturasFragment();
+        }
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 3;
     }
 }

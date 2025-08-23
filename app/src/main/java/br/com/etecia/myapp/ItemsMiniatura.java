@@ -35,5 +35,33 @@ public class ItemsMiniatura extends AppCompatActivity {
 
         idViewPagerItensMiniatura = findViewById(R.id.idViewPagerItensMiniatura);
         idTableLayoutItemsMiniatura = findViewById(R.id.idTableLayoutItemsMiniatura);
-    }
+
+        var x = new AdapterItensMiniatura(this);
+
+        idViewPagerItensMiniatura.setAdapter(x);
+
+        idTableLayoutItemsMiniatura.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                idViewPagerItensMiniatura.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        idViewPagerItensMiniatura.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                idTableLayoutItemsMiniatura.getTabAt(position).select();
+            }
+        });
 }
