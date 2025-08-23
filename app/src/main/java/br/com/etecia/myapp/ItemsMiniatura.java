@@ -11,10 +11,12 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.tabs.TabLayout;
 
 public class ItemsMiniatura extends AppCompatActivity {
     MaterialToolbar toolbar;
     ViewPager2 idViewPagerItensMiniatura;
+    TabLayout idTableLayoutItemsMiniatura;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +34,6 @@ public class ItemsMiniatura extends AppCompatActivity {
         });
 
         idViewPagerItensMiniatura = findViewById(R.id.idViewPagerItensMiniatura);
+        idTableLayoutItemsMiniatura = findViewById(R.id.idTableLayoutItemsMiniatura);
     }
 }
