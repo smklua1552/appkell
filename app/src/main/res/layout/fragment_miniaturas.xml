@@ -5,13 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".MiniaturasFragment"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:background="#ff5555">
-    <TextView
+    android:gravity="center_horizontal">
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Miniaturas"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        android:textColor="#fff" />
+        android:id="@+id/recyclerView" />
 </LinearLayout>

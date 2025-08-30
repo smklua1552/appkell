@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idCardViewMiniatura"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgCardMiniatura"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="#000000" />
+
+        <TextView
+            android:id="@+id/idTituloMiniatura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@id/imgCardMiniatura"
+            android:text="Título"
+            android:textColor="#bbbbbb"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idDescricaoMiniatura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTituloMiniatura"
+            android:layout_toEndOf="@id/imgCardMiniatura"
+            android:text="Descrição"
+            android:textColor="#bbbbbb"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

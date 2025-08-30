@@ -25,7 +25,7 @@ public class ItemsMiniatura extends AppCompatActivity {
         setContentView(R.layout.items_miniatura_layout);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            v.setPadding(0, systemBars.top, 0, 0);
             return insets;
         });
         toolbar = findViewById(R.id.idToolbar);
@@ -64,4 +64,5 @@ public class ItemsMiniatura extends AppCompatActivity {
                 idTableLayoutItemsMiniatura.getTabAt(position).select();
             }
         });
+    }
 }
