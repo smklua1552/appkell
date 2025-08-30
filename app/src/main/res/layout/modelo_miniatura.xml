@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/idCardViewMiniatura"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="150dp"
+    android:layout_marginBottom="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,7 +15,8 @@
             android:id="@+id/imgCardMiniatura"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="#000000" />
+            android:src="#000000"
+            android:padding="30dp" />
 
         <LinearLayout
             android:layout_centerInParent="true"
@@ -37,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="Descrição"
                 android:textColor="#bbbbbb"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>
