@@ -36,8 +36,8 @@ public class AcessoriosFragment extends Fragment {
 
         var adapter = new AdaptadorAcessorio(getContext(), List.of(
                 new Acessorio("Colar do Eren", R.drawable.eren_colar),
-                new Acessorio("Armin Arlert Acessório", R.drawable.armin_acessorio),
-                new Acessorio("Mikasa Ackerman Acessório", R.drawable.cachicol_mikasa)
+                new Acessorio("Pingente do Armin Arlert", R.drawable.armin_acessorio),
+                new Acessorio("Cachecol da Mikasa Ackerman", R.drawable.cachicol_mikasa)
         ));
 
         acessorioRecyclerView.setAdapter(adapter);
