@@ -5,13 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".LojaFragment"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:background="#00ff00">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Loja"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        android:textColor="#fff" />
+    android:gravity="center_horizontal">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lojaRecyclerView" />
 </LinearLayout>
