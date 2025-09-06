@@ -2,21 +2,28 @@ package br.com.etecia.myapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 public class ItemsMiniatura extends AppCompatActivity {
     MaterialToolbar toolbar;
-    ViewPager2 idViewPagerItensMiniatura;
-    TabLayout idTableLayoutItemsMiniatura;
+//    ViewPager2 idViewPagerItensMiniatura;
+//    TabLayout idTableLayoutItemsMiniatura;
+
+    FrameLayout frameLayout;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,36 +40,60 @@ public class ItemsMiniatura extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), MenuPrincipalActivity.class));
         });
 
-        idViewPagerItensMiniatura = findViewById(R.id.idViewPagerItensMiniatura);
-        idTableLayoutItemsMiniatura = findViewById(R.id.idTableLayoutItemsMiniatura);
+//        idViewPagerItensMiniatura = findViewById(R.id.idViewPagerItensMiniatura);
+//        idTableLayoutItemsMiniatura = findViewById(R.id.idTableLayoutItemsMiniatura);
+//
+//        var x = new AdapterItensMiniatura(this);
+//
+//        idViewPagerItensMiniatura.setAdapter(x);
+//
+//        idTableLayoutItemsMiniatura.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//                idViewPagerItensMiniatura.setCurrentItem(tab.getPosition());
+//            }
+//
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+//
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//
+//            }
+//        });
+//
+//        idViewPagerItensMiniatura.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+//            @Override
+//            public void onPageSelected(int position) {
+//                super.onPageSelected(position);
+//                idTableLayoutItemsMiniatura.getTabAt(position).select();
+//            }
+//        });
 
-        var x = new AdapterItensMiniatura(this);
 
-        idViewPagerItensMiniatura.setAdapter(x);
+        bottomNavigationView = findViewById(R.id.idBottomNavigationView);
+        frameLayout = findViewById(R.id.idFrameLayout);
 
-        idTableLayoutItemsMiniatura.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                idViewPagerItensMiniatura.setCurrentItem(tab.getPosition());
+        bottomNavigationView.setOnItemSelectedListener((MenuItem item) -> {
+            Fragment fragment = null;
+
+            if (item.getItemId() == R.id.mMiniaturas) {
+                fragment = new MiniaturasFragment();
+            } else if (item.getItemId() == R.id.mAcessorios) {
+                fragment = new AcessoriosFragment();
+            } else if (item.getItemId() == R.id.mLoja) {
+                fragment = new LojaFragment();
             }
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.idFrameLayout, fragment).commit();
 
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
+            return true;
         });
 
-        idViewPagerItensMiniatura.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                idTableLayoutItemsMiniatura.getTabAt(position).select();
-            }
-        });
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.idFrameLayout, new MiniaturasFragment()).commit();
+        }
     }
 }

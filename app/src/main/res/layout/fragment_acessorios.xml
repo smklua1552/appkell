@@ -3,15 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AcessoriosFragment"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="#ff00ff">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acessórios"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        android:textColor="#fff" />
+    tools:context=".AcessoriosFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/acessorioRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

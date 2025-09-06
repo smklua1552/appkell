@@ -11,46 +11,61 @@
         android:id="@+id/idAppBarItensMiniatura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/idToolbar"
-            app:navigationIcon="@drawable/baseline_arrow_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/baseline_arrow_back"
             app:title="Miniaturas" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.tabs.TabLayout
-        android:layout_below="@id/idAppBarItensMiniatura"
-        android:id="@+id/idTableLayoutItemsMiniatura"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabMode="fixed">
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/idTableLayoutItemsMiniatura"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/idAppBarItensMiniatura"-->
+<!--        app:tabMode="fixed">-->
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/doc"
-            android:text="Miniaturas" />
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:icon="@drawable/doc"-->
+<!--            android:text="Miniaturas" />-->
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/gear"
-            android:text="Acessórios" />
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:icon="@drawable/gear"-->
+<!--            android:text="Acessórios" />-->
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/house"
-            android:text="Loja" />
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:icon="@drawable/house"-->
+<!--            android:text="Loja" />-->
 
 
-    </com.google.android.material.tabs.TabLayout>
+<!--    </com.google.android.material.tabs.TabLayout>-->
 
-    <androidx.viewpager2.widget.ViewPager2
+<!--    <androidx.viewpager2.widget.ViewPager2-->
+<!--        android:id="@+id/idViewPagerItensMiniatura"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@id/idTableLayoutItemsMiniatura" />-->
+    
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/idTableLayoutItemsMiniatura"
-        android:id="@+id/idViewPagerItensMiniatura" />
+        android:id="@+id/idFrameLayout"
+        android:layout_below="@id/idAppBarItensMiniatura" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_chat_bottom_nav"
+        android:id="@+id/idBottomNavigationView" />
 
 </RelativeLayout>

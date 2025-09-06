@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.appbar.MaterialToolbar;
+
 import java.util.List;
 
 public class MiniaturasFragment extends Fragment {
@@ -40,6 +42,9 @@ public class MiniaturasFragment extends Fragment {
         ));
 
         recyclerView.setAdapter(adapter);
+
+        var toolbar = (MaterialToolbar) getActivity().findViewById(R.id.idToolbar);
+        toolbar.setTitle("Miniaturas");
 
         return view;
     }
