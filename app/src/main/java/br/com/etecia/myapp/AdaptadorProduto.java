@@ -29,9 +29,9 @@ public class AdaptadorProduto extends RecyclerView.Adapter<AdaptadorProduto.View
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imgCardLoja = (ImageView) itemView.findViewById(R.id.imgCardLoja);
-            titulo = (TextView) itemView.findViewById(R.id.idTituloLoja);
-            descricao = (TextView) itemView.findViewById(R.id.idDescricaoLoja);
+            imgCardLoja = itemView.findViewById(R.id.imgCardLoja);
+            titulo = itemView.findViewById(R.id.idTituloLoja);
+            descricao = itemView.findViewById(R.id.idDescricaoLoja);
         }
 
         public ImageView getImgCardLoja() {

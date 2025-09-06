@@ -29,7 +29,7 @@ public class LojaFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_loja, container, false);
 
-        lojaRecyclerView = (RecyclerView) view.findViewById(R.id.lojaRecyclerView);
+        lojaRecyclerView = view.findViewById(R.id.lojaRecyclerView);
         layoutManager = new LinearLayoutManager(getActivity());
 
         lojaRecyclerView.setLayoutManager(layoutManager);
