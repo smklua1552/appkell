@@ -1,6 +1,5 @@
 package br.com.etecia.myapp;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class AdaptadorMiniatura extends RecyclerView.Adapter<AdaptadorMiniatura.ViewHolder> {
-    private Context context;
     private List<Miniatura> lstMiniatura;
 
-    public AdaptadorMiniatura(Context context, List<Miniatura> lstMiniatura) {
-        this.context = context;
+    public AdaptadorMiniatura(List<Miniatura> lstMiniatura) {
         this.lstMiniatura = lstMiniatura;
     }
 
@@ -29,9 +26,9 @@ public class AdaptadorMiniatura extends RecyclerView.Adapter<AdaptadorMiniatura.
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imgCardMiniatura = (ImageView) itemView.findViewById(R.id.imgCardMiniatura);
-            titulo = (TextView) itemView.findViewById(R.id.idTituloMiniatura);
-            descricao = (TextView) itemView.findViewById(R.id.idDescricaoMiniatura);
+            imgCardMiniatura = itemView.findViewById(R.id.imgCardMiniatura);
+            titulo = itemView.findViewById(R.id.idTituloMiniatura);
+            descricao = itemView.findViewById(R.id.idDescricaoMiniatura);
         }
 
         public ImageView getImgCardMiniatura() {

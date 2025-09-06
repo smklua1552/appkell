@@ -34,7 +34,7 @@ public class MiniaturasFragment extends Fragment {
 
         recyclerView.setLayoutManager(layoutManager);
 
-        var adapter = new AdaptadorMiniatura(getContext(), List.of(
+        var adapter = new AdaptadorMiniatura(List.of(
                 new Miniatura("Eren Yeager", "Protagonista da série Shingeki no Kyojin", R.drawable.eren),
                 new Miniatura("Armin Arlert", "Amor do Eren", R.drawable.armin),
                 new Miniatura("Mikasa Ackerman", "Amigo do Eren", R.drawable.mikasa)

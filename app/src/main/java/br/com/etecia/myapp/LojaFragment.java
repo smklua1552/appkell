@@ -34,7 +34,7 @@ public class LojaFragment extends Fragment {
 
         lojaRecyclerView.setLayoutManager(layoutManager);
 
-        var adapter = new AdaptadorProduto(getContext(), List.of(
+        var adapter = new AdaptadorProduto(List.of(
                 new Produto("Attack on Titan 34", "O Estrondo esmagou as terras além da Ilha Paradis e tomou inúmeras vidas. Por um lado Armin, Mikasa e os outros descobrem em qual ponto devem atacar Eren. Inimigos, aliados, companheiros e tantas vidas perdidas depois, eles finalmente conseguem chegar até Eren.", R.drawable.aot),
                 new Produto("Attack on Titan 33", "Eren dá continuidade ao Estrondo para destruir todas as terras além da Ilha Paradis. Para alcançá-lo, Mikasa, Armin e o grupo vão para a cidade de Odiha onde a aeronave poderá ser preparada. Porém, o preço a ser pago será desistir de Revelio, a cidade onde as famílias do grupo de Annie e Reiner vivem...", R.drawable.aot33),
                 new Produto("Attack on Titan 32", "Para proteger a paz da Ilha Paradis, Eren decide exterminar a humanidade fora da ilha com o poder do Titã Fundador. Ele inicia seu ataque, seguido por inúmeros titãs. Serão eles heróis ou demônios? Sem chegar a uma conclusão, Mikasa, Armin e o resto do grupo se preparam para salvar o mundo.", R.drawable.aot32)

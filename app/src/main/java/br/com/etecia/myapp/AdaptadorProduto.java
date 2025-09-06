@@ -1,6 +1,5 @@
 package br.com.etecia.myapp;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class AdaptadorProduto extends RecyclerView.Adapter<AdaptadorProduto.ViewHolder> {
-    private Context context;
     private List<Produto> lstLoja;
 
-    public AdaptadorProduto(Context context, List<Produto> lstLoja) {
-        this.context = context;
+    public AdaptadorProduto(List<Produto> lstLoja) {
         this.lstLoja = lstLoja;
     }
 
